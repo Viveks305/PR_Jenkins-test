@@ -3,13 +3,13 @@ pipeline {
 	stages{
 		stage('build'){
 			steps {
-				bat ''
+				sh ''
 			}
 		}
 		
 		stage('test') {
 			steps{
-				bat 'python -m unittest app_test.py'
+				sh 'python -m unittest app_test.py'
 			}
 		}
 	
