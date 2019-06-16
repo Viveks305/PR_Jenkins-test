@@ -10,7 +10,7 @@ class CitiesTestCase(unittest.TestCase):
     response = tester.get('/cities.json', content_type='application/json')
     self.assertEqual(response.status_code, 200)
     #print(response.data.decode('unicode_escape'))
-    self.assertEqual(response.data.decode('unicode_escape'), json.dumps(['Amsterdam', 'San Franci', 'Berlin', 'New York']))
+    self.assertEqual(response.data.decode('unicode_escape'), json.dumps(['Amsterdam', 'San Franc', 'Berlin', 'New York']))
 
 if __name__ == '__main__':
     unittest.main()
